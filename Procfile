@@ -1,0 +1,1 @@
+web: gunicorn solar_dimensionator.wsgi --log-file -

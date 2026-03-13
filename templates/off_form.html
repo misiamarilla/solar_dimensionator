@@ -1,0 +1,34 @@
+<form method="post">
+{% csrf_token %}
+
+<h2>OFF GRID</h2>
+
+<input type="hidden" name="tipo" value="off">
+
+<div class="grid">
+
+<input name="consumo_diario_kwh" placeholder="Consumo diario kWh">
+
+<input name="horas_sol_pico" placeholder="Horas sol pico">
+
+<input name="eficiencia_sistema" placeholder="PR">
+
+<input name="inversor_rendimiento" placeholder="Eficiencia inversor">
+
+<input name="panel_watt" placeholder="Panel W">
+
+<input name="autonomia_dias" placeholder="Autonomía días">
+
+<input name="profundidad_descarga" placeholder="Profundidad descarga">
+
+<input name="tension_sistema" placeholder="Tensión sistema">
+
+<input name="bateria_nominal_ah" placeholder="Capacidad batería Ah">
+
+</div>
+
+<button type="submit">
+Calcular OFF GRID
+</button>
+
+</form>

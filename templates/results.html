@@ -1,0 +1,37 @@
+<div class="glass">
+
+<h1>Resultados</h1>
+
+{% if resultados %}
+
+<div class="results-grid">
+
+{% for key,value in resultados.items %}
+
+<div class="result-card">
+
+<strong>{{ key }}</strong>
+
+<p>{{ value }}</p>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+<div class="export">
+
+<button>
+Exportar Excel
+</button>
+
+</div>
+
+{% else %}
+
+<p>No hay cálculos aún.</p>
+
+{% endif %}
+
+</div>

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+
+<div class="logo">
+<img src="/static/img/logo.png">
+</div>
+
+<div class="nav">
+
+<div class="nav-card active" onclick="slideTo('on')">
+ON GRID
+</div>
+
+<div class="nav-card" onclick="slideTo('off')">
+OFF GRID
+</div>
+
+<div class="nav-card" onclick="slideTo('res')">
+RESULTADOS
+</div>
+
+</div>
+
+</div>
+
+<div class="toggle" onclick="toggleSidebar()" id="toggle">
+❮
+</div>
+
+<div class="stack">
+
+<section class="page active" id="on">
+{% include "on_form.html" %}
+</section>
+
+<section class="page" id="off">
+{% include "off_form.html" %}
+</section>
+
+<section class="page" id="res">
+{% include "results.html" %}
+</section>
+
+</div>
+
+{% endblock %}

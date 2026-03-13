@@ -1,0 +1,26 @@
+<form method="post">
+{% csrf_token %}
+
+<h2>ON GRID</h2>
+
+<input type="hidden" name="tipo" value="on">
+
+<div class="grid">
+
+<input name="consumo_diario_kwh" placeholder="Consumo diario kWh">
+
+<input name="horas_sol_pico" placeholder="Horas sol pico">
+
+<input name="eficiencia_sistema" placeholder="PR">
+
+<input name="inversor_rendimiento" placeholder="Eficiencia inversor">
+
+<input name="panel_watt" placeholder="Panel W">
+
+</div>
+
+<button type="submit">
+Calcular ON GRID
+</button>
+
+</form>
