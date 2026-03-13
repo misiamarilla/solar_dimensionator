@@ -37,13 +37,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-```
 
-**2. Tienes `STATIC_ROOT` duplicado** — borra una de las dos líneas.
-
-Luego sube los cambios y asegúrate de que en Render el Build Command sea:
-```
-pip install -r requirements.txt && python manage.py collectstatic --noinput
 ROOT_URLCONF = 'solar_dimensionator.urls'
 
 TEMPLATES = [
@@ -118,10 +112,4 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-```
 
-**Paso 3 — agrega el comando collectstatic en Render:**
-
-En Render → Settings → **Build Command** cámbialo a:
-```
-pip install -r requirements.txt && python manage.py collectstatic --noinput
